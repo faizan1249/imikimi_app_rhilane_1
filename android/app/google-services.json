@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "935649755567",
+    "project_id": "photo-frame-first",
+    "storage_bucket": "photo-frame-first.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935649755567:android:c860d25482fba94a4d6f5a",
+        "android_client_info": {
+          "package_name": "com.imikimi.old_frames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935649755567-mqncd8k7crpg0q30jj639rr35pej01qr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxnaSykUB1a6toes_qnB1dKA3Q9hMmy1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935649755567-mqncd8k7crpg0q30jj639rr35pej01qr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
