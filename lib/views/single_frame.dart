@@ -510,6 +510,7 @@ class _SingleFrameState extends State<SingleFrame> {
     File capturedFile = File(fullPath);
     await capturedFile.writeAsBytes(pngBytes);
     // print("Captured Path" + capturedFile.path);
+    
 
     await GallerySaver.saveImage(capturedFile.path,
             albumName: widget.frameLocationName, toDcim: true)
