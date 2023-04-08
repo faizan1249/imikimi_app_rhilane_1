@@ -1,4 +1,4 @@
-package com.example.photo_frame
+package com.imikimi.old_frames
 
 import io.flutter.embedding.android.FlutterActivity
 

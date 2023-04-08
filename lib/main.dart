@@ -8,13 +8,12 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:photo_frame/views/splash_screen.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  //Firebase.initializeApp();
   initializeFirabseStorage();
-  Firebase.initializeApp();
-
   MobileAds.instance.initialize();
-
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
 
@@ -23,21 +22,17 @@ void main() {
 
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  await Firebase.initializeApp();
+  // await Firebase.initializeApp();
   // print("inside _firebaseMessagingBackgroundHandler");
   // print(message.notification!.title.toString());
 }
 
 void initializeFirabseStorage() async {
-  await Firebase.initializeApp();
   NotificationServices notificationServices = NotificationServices();
   notificationServices.firebaseInit();
   notificationServices.requestNotificationPermission();
-
   final fcmToekn = await FirebaseMessaging.instance.getToken();
-  // print(fcmToekn);
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-  // WidgetsFlutterBinding.ensureInitialized();
 }
 
 class MyApp extends StatefulWidget {
@@ -50,8 +45,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   void initState() {
-    // notificationServices.firebaseInit();
-    //SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     super.initState();
   }
 
